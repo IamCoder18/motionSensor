@@ -12,7 +12,7 @@
     <button onclick="bluetooth()">Start</button>
     <script>
         let bluetooth = () => {
-            navigator.bluetooth.requestDevice(acceptAllDevices = true)
+            navigator.bluetooth.requestDevice({acceptAllDevices: true})
                 .then((device) => {
                     console.log(`Name: ${device.name}`);
                 })
